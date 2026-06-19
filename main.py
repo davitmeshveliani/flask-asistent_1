@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, request, jsonify
 from pydantic import BaseModel, EmailStr, ValidationError,Field
 
@@ -32,4 +33,18 @@ def register_user():
         return jsonify({"error": e.errors()}), 422
 
 if __name__ == "__main__":
+=======
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello, davit!'
+
+@app.route('/user/<name>')
+def user(name):
+    return f'Hello, {name}!'
+
+if __name__ == '__main__':
+>>>>>>> 6caabd5cfcc0500bd0981cacf13031916d4deaba
     app.run(debug=True)
