@@ -1,6 +1,10 @@
 from flask import Flask
 app = Flask(__name__)
 
+
+#1): @app.route("/") — добавлен слэш для корректного указания корневого маршрута.#
+
+
 @app.route('/')
 def home():
     return 'Hello, davit!'
